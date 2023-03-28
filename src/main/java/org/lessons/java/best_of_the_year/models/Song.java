@@ -7,9 +7,9 @@ public class Song {
     private int id;
     private String title;
 
-    public Song(String title) {
-        Random rnd = new Random();
-        this.id = rnd.nextInt(999999);
+    public Song(int id, String title) {
+
+        this.id = id;
         this.title = title;
     }
 

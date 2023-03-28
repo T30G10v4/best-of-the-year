@@ -7,9 +7,8 @@ public class Movie {
     private int id;
     private String title;
 
-    public Movie(String title) {
-        Random rnd = new Random();
-        this.id = rnd.nextInt(999999);
+    public Movie(int id, String title) {
+        this.id = id;
         this.title = title;
     }
 

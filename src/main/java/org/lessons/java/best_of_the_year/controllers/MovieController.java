@@ -42,7 +42,7 @@ public class MovieController {
 
         for(int i = 1; i<6; i++){
 
-            movieTitles.add(new Movie("Arma Letale "+i));
+            movieTitles.add(new Movie(i,"Arma Letale "+i));
 
         }
 

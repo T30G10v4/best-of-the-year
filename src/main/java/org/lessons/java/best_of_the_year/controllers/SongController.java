@@ -36,27 +36,13 @@ public class SongController {
         return "song-detail";
     }
 
-    private List<Song> getBestsongs() {
-
-        List<Song> songTitles = new ArrayList<>();
-
-        for(int i = 0; i<5; i++){
-
-            songTitles.add(new Song("Unforgiven "+(++i)));
-
-        }
-
-        return songTitles;
-
-    }
-
     private List<Song> getBestSongs() {
 
         List<Song> songTitles = new ArrayList<>();
 
         for(int i = 1; i<6; i++){
 
-            songTitles.add(new Song("Unforgiven "+i));
+            songTitles.add(new Song(i, "Unforgiven "+i));
 
         }
 

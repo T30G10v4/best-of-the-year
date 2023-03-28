@@ -10,7 +10,9 @@
 <body>
 <h1>LISTA DI SONGS:</h1>
 <ul>
-    <li th:each="song : ${list}" th:text="${song.title}"></li>
+    <li th:each="song : ${list}">
+        <a th:href="|songs/${song.id}|" th:text="${song.title}"></a>
+    </li>
 
 </ul>
 </body>

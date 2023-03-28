@@ -10,7 +10,9 @@
 <body>
     <h1>LISTA DI MOVIES:</h1>
     <ul>
-        <li th:each="movie : ${list}" th:text="${movie.title}"></li>
+        <li th:each="movie : ${list}" >
+            <a th:href="|movies/${movie.id}|" th:text="${movie.title}"></a>
+        </li>
 
     </ul>
 </body>
