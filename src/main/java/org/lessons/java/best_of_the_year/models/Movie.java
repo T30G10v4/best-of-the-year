@@ -1,4 +1,4 @@
-package org.lessons.java.best_of_the_year.controllers;
+package org.lessons.java.best_of_the_year.models;
 
 import java.util.Random;
 
