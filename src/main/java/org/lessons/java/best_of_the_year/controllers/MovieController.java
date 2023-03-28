@@ -27,11 +27,17 @@ public class MovieController {
     @GetMapping("/{movieId}")
     public String movieDetail(@PathVariable int movieId, Model model){
 
+        Boolean found = false;
         for (Movie m: getBestMovies()) {
 
-            if(m.getId() == movieId) model.addAttribute("movie", m);
-            
+            if(m.getId() == movieId) {
+                model.addAttribute("movie", m);
+                found = true;
+            }
+
         }
+
+        if(!found) return "404";
 
         return "movie-detail";
     }

@@ -27,12 +27,17 @@ public class SongController {
     @GetMapping("/{songId}")
     public String songDetail(@PathVariable int songId, Model model){
 
+        Boolean found = false;
         for (Song s: getBestSongs()) {
 
-            if(s.getId() == songId) model.addAttribute("song", s);
-
+            if(s.getId() == songId)
+            {
+                model.addAttribute("song", s);
+                found = true;
+            }
         }
 
+        if(!found)  return "404";
         return "song-detail";
     }
 
