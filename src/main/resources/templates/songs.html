@@ -8,7 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-  b
-<div th:text="${list}"></div>
+<h1>LISTA DI SONGS:</h1>
+<ul>
+    <li th:each="song : ${list}" th:text="${song.title}"></li>
+
+</ul>
 </body>
 </html>
